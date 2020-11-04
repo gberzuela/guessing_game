@@ -7,15 +7,70 @@
     <link rel="stylesheet" href="main.css">
     <!-- the MAIN.CSS file is linked here -->
   </head>
-
   <body>
 
+    <div id='app'>
 
+      <div class='center' id='feedback-div'>
+        <h1 class='text-style' id='main-prompt'>Guess My Number!</h1>
+        <h3 class='text-style' id='message'>
+          I am thinking of a number between 1-100.<br>You have 5 guesses and 1 hint.<br>Good luck.
+        </h3>
+    </div>
 
+      <!-- user input -->
+      <div class='center' id='user-input-div'>
+        <input class='center' id='guess' type='text' placeholder='#'>
+        <button class='center'id='submit'>Submit</button>
+      </div>
 
+      <!-- guess history -->
+      <div class='center' id='guess-list'>
+        <h2 class='text-style'>Previous Guesses</h2>
+        <ul id='history'>
+          <li class='past-guess'> - </li>
+          <li class='past-guess'> - </li>
+          <li class='past-guess'> - </li>
+          <li class='past-guess'> - </li>
+          <li class='past-guess'> - </li>
+        </ul>
+      </div>
 
-    <!-- <script src='js/guessing-game.js'></script> -->
-    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+      <!-- reset and hint buttons -->
+      <div class='center' id='reset-hint-btn'>
+        <button id='reset'>Reset</button>
+        <button id='hint'>Need Help?</button>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <span class='center' id='footer'>
+      <h3>
+        Project by: Gerald Lou Berzuela
+        <!-- GitHub -->
+        <a href='https://github.com/gberzuela/guessing-game' target='_blank'>
+          <img class='icon' src='/images/GitHub-Mark-64px.png'>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href='https://www.linkedin.com/in/gerald-lou-berzuela-151b321b5/' target='_blank'>
+          <img class='icon' src='/images/LinkedIn.jpg'>
+        </a>
+
+        <!-- FSA -->
+        <a href='https://www.fullstackacademy.com/' target='_blank'>
+          <img class='icon' src='/images/FSA.png'>
+        </a>
+        <!-- Memes -->
+        <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO' target='_blank'>
+          <img class='icon' src='/images/youtube.png'>
+        </a>
+      </h3>
+    </span>
+
+    <!-- linking js -->
+    <script src='js/guessing-game.js'></script>
+
   </body>
-
 </html>

@@ -1,1 +1,113 @@
 /* Write your CSS code in this file */
+#app {
+	margin: 50px auto;
+	background: linear-gradient(darkolivegreen 60%, darkmagenta);
+}
+
+.text-style {
+	outline-color: black;
+	outline-width: 1px;
+	/* text-shadow: 5px 2px black; */
+	-webkit-text-stroke-width: 0.4px;
+	-webkit-text-stroke-color: black;
+	color: darkmagenta;
+}
+
+.center {
+	text-align: center;
+	margin: auto;
+}
+
+#feedback-div {
+	padding: 10px;
+	/* background-color: darkslategrey; */
+}
+
+/* Biggest text on screen for user */
+#main-prompt {
+}
+
+/* Supplementary info for user */
+#message {
+}
+
+#user-input-div {
+	padding: 15px;
+	/* margin: 5px; */
+	/* background-color: blue; */
+}
+
+/* Input field */
+#guess {
+	background-color: lightgrey;
+	display: block;
+	border: 2px solid black;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	font-size: 60px;
+}
+
+/* Submit button */
+#submit {
+	margin: 10px;
+	border: 2 spx solid black;
+	color: gainsboro;
+	background-color: darkred;
+	/* border-radius: 50%; */
+	/* width: 60px;
+    height: 60px; */
+}
+
+#guess-list {
+	margin: -10px;
+	/* background-color: red; */
+}
+
+/* ul element: previous guesses section */
+#history {
+	list-style: none;
+}
+
+/* li elements: under past guesses */
+.past-guess {
+	background-color: lightgrey;
+	display: inline;
+	font-size: 20px;
+	border: 2px solid black;
+	margin: 10px;
+	padding: 0 25px;
+	border-radius: 8%;
+}
+
+#reset-hint-btn {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#reset {
+	color: gainsboro;
+	background-color: darkred;
+}
+
+#hint {
+	color: gainsboro;
+	background-color: darkred;
+}
+
+#submit:hover {
+	background-color: crimson;
+}
+
+#reset:hover {
+	background-color: crimson;
+}
+
+#hint:hover {
+	background-color: crimson;
+}
+
+.icon {
+	width: 25px;
+	height: 25px;
+}
