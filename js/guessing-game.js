@@ -90,12 +90,10 @@ class Game {
 
     provideHint() {
         let hint = [this.winningNumber];
-
+        const max = this.isLower() ? this.winningNumber - 5 : this.winningNumber + 5 
         while (hint.length < 3) {
-            const newNumber = generateWinningNumber();
-            if (Math.abs(newNumber - this.playersGuess) <= 10 && !hint.includes(newNumber)) {
-                hint.push(newNumber);
-            }
+            const newNumber = Math.floor( Math.random() * (max - game.winningNumber) + game.winningNumber);
+            if (!hint.includes(newNumber)) hint.push(newNumber);
         }
 
         return shuffle(hint);
@@ -118,7 +116,7 @@ const reset = document.getElementById('reset');
 function pauseScreen(result) {
     updateList(result);
     prompt.innerHTML = `${result} Would you like to try again?`;
-    message.innerHTML = result === 'You Win!' ? 'Congrats!' : ':c';
+    message.innerHTML = result === 'You Win!' ? 'Congrats!' : `Should have guessed ${game.winningNumber} :c`;
     reset.innerHTML = 'Play Again!';
     input.disabled = true;
     submit.disabled = true;
@@ -201,9 +199,13 @@ document.onkeydown = event => {
 
 // Hint event handler: get the hints, show them, disable the button
 function handleHintBtn() {
-    let hints = game.provideHint();
-    message.innerHTML = `The answer is one of the following: ${hints[0]}, ${hints[1]}, and ${hints[2]}`;
-    hint.disabled = true;
+    if (game.pastGuesses.length < 3) {
+        prompt.innerHTML = 'A little early for a hint, don\'t you think?';
+    } else {
+        let hints = game.provideHint();
+        prompt.innerHTML = `The answer is one of the following: ${hints[0]}, ${hints[1]}, and ${hints[2]}`;
+        hint.disabled = true;
+    }
 }
 
 // Reset event handler: create a new game, change all the prompts, reenable buttons, clear history
