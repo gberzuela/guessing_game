@@ -1,26 +1,34 @@
 /* Write your CSS code in this file */
+body {
+	background: rgb(69, 78, 78);
+}
+
 #app {
-	margin: 50px auto;
+	width: 75%;
+	margin: auto;
+	border: 1px solid black;
 	background: linear-gradient(darkolivegreen 60%, darkmagenta);
+	box-shadow: 5px 10px 18px #888888;
+	border-radius: 25px;
 }
 
 .text-style {
+	color: darkmagenta;
 	outline-color: black;
 	outline-width: 1px;
-	/* text-shadow: 5px 2px black; */
+
+	/* Text outline */
 	-webkit-text-stroke-width: 0.4px;
 	-webkit-text-stroke-color: black;
-	color: darkmagenta;
 }
 
 .center {
-	text-align: center;
 	margin: auto;
+	text-align: center;
 }
 
 #feedback-div {
 	padding: 10px;
-	/* background-color: darkslategrey; */
 }
 
 /* Biggest text on screen for user */
@@ -39,29 +47,30 @@
 
 /* Input field */
 #guess {
-	background-color: lightgrey;
-	display: block;
-	border: 2px solid black;
-	border-radius: 50%;
 	width: 120px;
 	height: 120px;
+	border: 2px solid black;
+	outline: none;
+	display: block;
 	font-size: 60px;
+	box-shadow: 5px 10px 18px #888888;
+	border-radius: 50%;
+	background-color: lightgrey;
+}
+
+#guess:hover {
+	transform: scale(1.2);
 }
 
 /* Submit button */
 #submit {
-	margin: 10px;
-	border: 2 spx solid black;
 	color: gainsboro;
-	background-color: darkred;
-	/* border-radius: 50%; */
-	/* width: 60px;
-    height: 60px; */
+	border: 2 spx solid black;
+	margin-top: 25px;
 }
 
 #guess-list {
 	margin: -10px;
-	/* background-color: red; */
 }
 
 /* ul element: previous guesses section */
@@ -71,13 +80,13 @@
 
 /* li elements: under past guesses */
 .past-guess {
-	background-color: lightgrey;
-	display: inline;
-	font-size: 20px;
 	border: 2px solid black;
 	margin: 10px;
+	display: inline;
 	padding: 0 25px;
+	font-size: 20px;
 	border-radius: 8%;
+	background-color: lightgrey;
 }
 
 #reset-hint-btn {
@@ -85,29 +94,23 @@
 	padding-bottom: 15px;
 }
 
-#reset {
+.button-style {
 	color: gainsboro;
 	background-color: darkred;
 }
 
-#hint {
-	color: gainsboro;
-	background-color: darkred;
-}
-
-#submit:hover {
-	background-color: crimson;
-}
-
-#reset:hover {
-	background-color: crimson;
-}
-
-#hint:hover {
+.hover-style:hover {
 	background-color: crimson;
 }
 
 .icon {
 	width: 25px;
 	height: 25px;
+}
+
+#footer {
+	width: 75%;
+	border: 1px solid black;
+	background: rgb(212, 209, 209);
+	border-radius: 25px;
 }
